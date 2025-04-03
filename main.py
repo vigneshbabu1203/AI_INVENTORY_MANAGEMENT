@@ -3,14 +3,14 @@ from agents.classification import AIDrivenClassificationAgent
 from agents.forecast import MovingAverageForecastAgent, SlowMovingForecastAgent, SeasonalForecastAgent
 from agents.recommendation import AIRecommendationAgent
 
-def run_inventory_pipeline(material_code):
+def run_inventory_pipeline(material_id):
     """Runs inventory forecasting pipeline using SQL data."""
-    print(f"\n🔍 Fetching sales data for Material: {material_code}...")
+    print(f"\n🔍 Fetching sales data for Material: {material_id}...")
 
-    query_result = azure_sql_gm3(f"Get details of Material '{material_code}' from Consumption.")
+    query_result = azure_sql_gm3(f"Get details of Material '{material_id}' from Consumption.")
 
     if not query_result:
-        print(f"❌ No data found for {material_code}")
+        print(f"❌ No data found for {material_id}")
         return
 
     sales_data = [entry["sales"] for entry in query_result]
