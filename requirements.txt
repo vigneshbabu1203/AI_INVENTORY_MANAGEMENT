@@ -1,0 +1,11 @@
+pandas
+numpy
+sqlalchemy
+pyodbc
+langchain
+openai
+langchain-openai
+langchain-community
+statsmodels
+prophet
+streamlit
