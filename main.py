@@ -31,11 +31,11 @@ def run_inventory_pipeline(material_code):
     decision = recommendation_agent.decide_action(forecast, category)
 
     # Print the result
-    print(f"\n📌 Material: {material_code}")
+    print(f"\n📌 Material: {material}")
     print(f"📊 Category: {category}")
     print(f"📈 Forecast (Next 6 Months): {forecast}")
     print(f"📦 Recommended Action: {decision}")
 
 # Run the pipeline for a test material
 if __name__ == "__main__":
-    run_inventory_pipeline("GM21882483")
+    run_inventory_pipeline("xxxxxxxx")#add the required material id
